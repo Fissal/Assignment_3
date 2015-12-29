@@ -4,11 +4,7 @@ from django import forms
 from Assignment3.models import *
 
 
-courses = [(course.C_Name,course.C_Name) for course in Courses.objects.all()]
-students = [(student.Student_Name,student.Student_Name) for student in Student.objects.all()]
-class EnrollForm(forms.Form):
-    courses = forms.ChoiceField(courses, required=False,widget=forms.Select())
-    students =forms.ChoiceField(students,required=False,widget=forms.Select())
+
 
 class TeacherInfo(forms.Form):
     Teacher_Name = forms.CharField(max_length = 70)
@@ -23,6 +19,11 @@ class StudentInfo(forms.Form):
     Student_LastName = forms.CharField(max_length = 70)
     Student_Email = forms.EmailField()
 
+courses = [(course.C_Name,course.C_Name) for course in Courses.objects.all()]
+students = [(student.Student_Name,student.Student_Name) for student in Student.objects.all()]
+class EnrollForm(forms.Form):
+    courses = forms.ChoiceField(courses, required=False,widget=forms.Select())
+    students =forms.ChoiceField(students,required=False,widget=forms.Select())
 
 class CoursesInfo(forms.Form):
     C_Name = forms.CharField(max_length = 70)
