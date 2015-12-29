@@ -4,8 +4,6 @@ from django import forms
 from Assignment3.models import *
 
 
-
-
 class TeacherInfo(forms.Form):
     Teacher_Name = forms.CharField(max_length = 70)
     Teacher_LastName = forms.CharField(max_length = 70)
@@ -31,9 +29,3 @@ class CoursesInfo(forms.Form):
     C_Classroom = forms.CharField(max_length = 30)
     C_Time = forms.TimeField()
     C_Teacher = forms.ModelChoiceField(queryset = Teacher.objects.all())
-
-
-
-
-
-
