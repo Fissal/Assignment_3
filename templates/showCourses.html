@@ -1,0 +1,12 @@
+<html>
+<head><title>Enrolled Students</title></head>
+<body>
+<h1>Enrolled Students</h1>
+<ul>
+{% for Courses in courseStudetList %}
+	<li>{{ Courses.Student_Name }}, </li>
+{% endfor %}
+ </ul>
+ </body>
+ </html>
+

@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Course</title>
+</head> 
+<body>
+ <h1>Course</h1>
+ <ul> {% for Course in Courselist %} 
+    <li>{{ Course.C_Name }}, {{ Course.C_Code }}, {{ Course.C_Classroom }}
+    , {{ Course.C_Time }}, {{ Course.C_Teacher }}</li> 
+{% endfor %} 
+</ul> 
+</body>
+</html>
+
+
+
+
